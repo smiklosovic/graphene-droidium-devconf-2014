@@ -1,0 +1,302 @@
+Functional _testing_ of _web_ and _Android_ applications with Arquillian _Graphene_ and _Droidium_
+==================================================================================================
+Juraj Húska & Štefan Miklošovič
+v1.0, Feb 8, 2013
+:title: Graphene and Droidium
+:copywrite: CC BY-SA 2.0
+:website: http://arquillian.org
+:slidesurl: www.test-invaders.org/talks/2013-arquillian-safari
+:imagesdir: images
+:backend: dzslides
+:linkcss:
+:dzslides-style: stormy
+:dzslides-transition: fade
+:dzslides-highlight: monokai
+:dzslides-fonts: family=Signika:400,700,200,300&subset=latin,latin-ext&family=Cedarville+Cursive
+//:dzslides-fonts: family=Yanone+Kaffeesatz:400,700,200,300&&subset=latin,latin-ext&family=Cedarville+Cursive
+:syntaxoff: syntax="no-highlight"
+
+[{topic}]
+== Who are we?
+
+--
+* Juraj Húska
+** RichFaces QE, Graphene commiter
+** @jhuska 
+--
+
+--
+* Štefan Miklošovič
+** QA Engineer at Red Hat, Inc.
+** @smikloso
+--
+
+[{topic}]
+== Agenda
+
+[role="incremental text-left"]
+* Graphene introduction
+* Graphene hottest goodies
+* Droidium introduction
+* Droidium in action
+
+
+== \\
+
+[{statement}]
+What is Graphene ?
+
+[{topic}]
+== *Writing* and mantaining tests
+
+image::development.jpg[role="pull-left stretch-x stretch-y"]
+
+[{topic}]
+== Writing and *maintaining* tests
+
+image::maintenance.jpg[role="middle"]
+
+== \\
+
+[role="pull-right"]
+* DRY
+
+image::dry.jpg[role="middle stretch-x"]
+
+[{topic}]
+== Testers
+
+image::tester1.jpg[role="middle"]
+
+[{topic}]
+== Testers
+image:tester2.jpg[role="pull-left"]
+image:tester3.jpg[role="pull-right"]
+
+[{topic}]
+== Arquillian
+
+image::ike.png[role="pull-left stretch-y"]
+
+[role="incremental text-right"]
+* Integration framework for other test tools
+* Supports all CI, CLI and IDE
+* Extensible
+
+[{topic}]
+== Arquillian Graphene
+
+image::graphene-logo.png[role="pull-right"]
+
+[role="incremental text-left"]
+* WebDriver on Steroids
+* Painkiller for testers
+
+[{topic}]
+== Fallback pre tych co nevedia Graphene aspontrocha nieco
+
+== \\
+
+[{topic}]
+== Dke premostenie trocha otazaka etc.
+
+== \\
+
+[{statement}]
+@JQueryLocator
+
+== \\
+
+[{statement}]
+@Page Objects
+
+== \\
+
+[{statement}]
+@Page Fragments
+
+== \\
+
+[{statement}]
+@InFrame
+
+== \\
+
+[{statement}]
+@Location
+
+== \\
+
+* Interceptors
+* JavaScript Interfaces
+* Request guards
+* Fluent Waiting API
+* Multiple browsers
+* *...and other Graphene goodies ...*
+
+[{topic}]
+== Graphene & Droidium
+
+image::bushAndPutin.jpg[role="middle"]
+
+== \\
+
+[{statement}]
+Wanna test some *mobile*, huh?
+
+[{intro}]
+== Arquillian Droidium
+
+== \\
+
+*Droidium* is
+[{stepwise}]
+* Tool for Android ftesting
+* Arquillian container adapter
+** manages your Android devices
+*** dynamically
+[{stepwise}]
+* Glues together
+** An *droid*
+** Selen *ium* WebDriver
+** Arquillian Drone
+** Arquillian Graphene
+
+== \\$
+
+Where I can test?
+[{stepwise}]
+* ... in emulator?
+** yay!
+* ... in physical device ?
+** yay!
+* Do I have to start it before?
+** nope
+* What if I don't have any device?
+** it is dynamically created and deleted
+
+// ^^^ toto precnieva zo stranky, skratit alebo vymazat
+
+== \\
+
+*Droidium* is also
+[{stepwise}]
+* smart
+** does everything for you
+* standalone
+** automate your Android device!
+* pluggable
+** *web* testing plugin
+** *native* and *hybrid* testing plugin
+
+== \\
+
+*Web testing* plugin
+
+[{stepwise}]
+* code your web application
+* deploy web app to *JBoss AS*
+* start or connect to Android
+* open web app in *Android*
+* test web app via *Selenium*
+* all above *in one test run*
+[{stepwise}]
+** as *mvn test*
+
+== \\
+
+*Native testing* plugin
+[{stepwise}]
+* have your APK *as is*
+* install (deploy) it to Android
+* start Android activities
+* test native app just as web app
+** via WebDriver API
+* all above *in one test run*
+[{stepwise}]
+** as *mvn test*
+
+[{source}]
+== Operating on native elements
+
+.MyNativeTest.java
+[syntax="java"]
+----
+WebElement usernameField = mobile.findElement(By.id('some_field'));
+usernameField.sendKeys("john");
+
+WebElement submitButton = mobile.findElement(By.id('some_button'));
+submitButton.click();
+
+// Selenium touch API, swipe from right to left
+
+WebElement contacts = mobile.findElement(By.id("contacts"));
+new TouchActions(mobile).flick(contacts, -100, 0, 0).perform();
+----
+
+IDs are just Android resource identifiers
+
+== \\
+
+[{statement}]
+Web & native can be mixed
+
+== \\
+
+[{intro}]
+== Droidium *demo*
+
+== \\
+
+*Droidium wrapping up*
+[{stepwise}]
+* No excuses not to test
+* Cloud ready
+** Travis
+** CloudBees
+* Test *complex* usage scenarios
+* Test *communication* between web and mobile clients
+* Sky is the limit ...
+
+[role="topic recap final"]
+== Final recap / prerobit
+
+[{stepwise}]
+* Arquillian *reuses* existing tools
+* Plenty of *extensions* 
+** UI testing
+** Fault injection
+** REST
+** ...
+* Supports *more* then Java
+** Android
+** JavaScript
+** Groovy
+* CI *ready*
+
+[{ending}, hrole="name"]
+== Get *testing* done!
+
+[role="footer"]
+arquillian.org, #arquillian
+
+[{topic}]
+== Q&A
+
+image::success.png[{middle}]
+
+[{topic}]
+== Resources
+
+// prebrat zdroje a obrazky
+
+* Images from Flickr.com
+** http://www.flickr.com/photos/fiftyfeet/2225097095/[an image by Jordan Sitkin]
+** http://www.flickr.com/photos/mfloryan/8228861493/[an image  by Marcin Florian]
+** http://www.flickr.com/photos/matthijs/3514892055/[an image by matthijs]
+** http://www.flickr.com/photos/75905404@N00/7126146307/[an image by OZinOH]
+** http://www.flickr.com/photos/wongjunhao/2598768791/[an image by Jerry Wong]
+** http://www.flickr.com/photos/87616709@N00/5281595287/[an image by Lyn Gateley]
+** http://www.flickr.com/photos/naturalnewstracker/8274059769/[ an image by Natural News Tracker]
+** http://www.flickr.com/photos/thomashawk/2681744739/[an image by Thomas Hawk]
+** http://www.flickr.com/photos/volk/3402203600[an image by Willy Volk]
