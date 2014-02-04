@@ -84,6 +84,37 @@ image::ike.png[role="pull-left stretch-y"]
 * Extensible
 
 [{topic}]
+== Arquillian Crash Course
+
+image::deploymentScenario.png[role="middle"]
+
+[{topic}]
+== JUnit runner & Client mode
+
+image::deploymentScenario1.png[role="middle"]
+
+[{topic}]
+== Injecting deployed app URL and browser instance
+
+image::deploymentScenario2.png[role="middle"]
+
+[{topic}]
+== Deployment definition
+
+image::deploymentScenario3.png[role="middle"]
+
+[{topic}]
+== Test
+
+image::deploymentScenario4.png[role="middle"]
+
+== \\
+
+image::wowMoment1.jpg[role="middle"]
+
+// http://kwinkley.info/wp-content/uploads/2012/05/wow-moment1.jpg
+
+[{topic}]
 == Arquillian Graphene
 
 image::graphene-logo.png[role="pull-right"]
@@ -93,37 +124,231 @@ image::graphene-logo.png[role="pull-right"]
 * Painkiller for testers
 
 [{topic}]
-== Fallback pre tych co nevedia Graphene aspontrocha nieco
+== Graphene Crash Course
 
-== \\
+image::googleTestBasic.png[role="middle"]
 
 [{topic}]
-== Dke premostenie trocha otazaka etc.
+== Wiring up Web Page elements & Test
+
+image::googleTestBasic1.png[role="middle"]
+
+[{topic}]
+== Graphene test
+
+image::googleTestBasic2.png[role="middle"]
+
+== \\
+
+image::wowMoment2.jpg[role="middle"]
+
+// http://www.korpg.com/blog/wp-content/uploads/2012/05/that_was_awesome-300x300.jpg
 
 == \\
 
 [{statement}]
-@JQueryLocator
+Graphene 2.0.0.Final Released
+
+[{topic}]
+== Baby boy is doing well
+
+image::testPassing1.png[role="middle stretch-x stretch-y"]
+
+[{topic}]
+== Baby boy is doing well
+
+image::testPassing2.png[role="middle stretch-x"]
+
+[{topic}]
+== Father as well
+
+image::lukas.jpg[role="middle"]
 
 == \\
 
 [{statement}]
-@Page Objects
+What abilities baby boy has ?
 
-== \\
+[{topic}]
+== @JQueryLocator
 
-[{statement}]
-@Page Fragments
+image::jqueryLoc.png[role="middle"]
 
-== \\
+[{topic}]
+== @Page Objects
 
-[{statement}]
-@InFrame
+* well known WebDriver pattern
+* make tests more readable
+* Graphene enhances its usability
 
-== \\
+[{topic}]
+== What is wrong ?
 
-[{statement}]
-@Location
+image::googleTestBasic.png[role="middle"]
+
+[{topic}]
+== Page Objects declaration
+
+image::googleFrontPageObject.png[role="middle"]
+
+[{topic}]
+== Page Objects declaration
+
+image::googleResultPageObject.png[role="middle"]
+
+[{topic}]
+== Test with Page Objects
+
+image::googleTestWithPageObjects.png[role="middle"]
+
+[{topic}]
+== @Page annotation
+
+image::googleTestWithPageObjects1.png[role="middle"]
+
+[{topic}]
+== Test with Page Objects
+
+image::googleTestWithPageObjects2.png[role="middle"]
+
+[{topic}]
+== Improved maintenance, from this
+
+image::maintenance.jpg[role="middle"]
+
+[{topic}]
+== to this
+
+image::maintenance2.jpg[role="middle stretch-x stretch-y"]
+
+//http://picsmix.biz/wp-content/uploads/2013/08/nature-beauty-forestbridge-beauty-bridge-forest-green-man-made-nature-trees-vean2c48.jpg
+
+[{topic}]
+== Page Fragments
+
+* reusability
+* readability
+* cross browser testing
+
+[{topic}]
+== Page Fragments declaration
+
+image::autocompleteFragment.png[role="middle"]
+
+[{topic}]
+== Wiring up Page Fragment & Web page
+
+image::autocompleteFragment1.png[role="middle"]
+
+[{topic}]
+== Fragment's services
+
+image::autocompleteFragment2.png[role="middle"]
+
+[{topic}]
+== Fragment's help methods
+
+image::autocompleteFragment3.png[role="middle"]
+
+[{topic}]
+== Page Fragments injection into test
+
+image::testWithAutocompleteFragment.png[role="middle"]
+
+[{topic}]
+== Declaring Fragment's root element
+
+image::testWithAutocompleteFragment1.png[role="middle"]
+
+[{topic}]
+== Test with Page Fragments
+
+image::testWithAutocompleteFragment2.png[role="middle"]
+
+[{topic}]
+== Improved DRY, from this
+
+image::dry.jpg[role="middle stretch-x"]
+
+[{topic}]
+== to this
+
+image::dry2.png[role="middle stretch-x"]
+
+[{topic}]
+== @InFrame - plain WebDriver
+
+image::inframePlainWD.png[role="middle"]
+
+[{topic}]
+== @InFrame - plain WebDriver
+
+image::inframePlainWD1.png[role="middle"]
+
+[{topic}]
+== @InFrame - plain WebDriver
+
+image::inframePlainWD2.png[role="middle"]
+
+[{topic}]
+== @InFrame - plain WebDriver
+
+image::inframePlainWD3.png[role="middle"]
+
+[{topic}]
+== @InFrame - Graphene way
+
+image::inframeGraphene.png[role="middle"]
+
+[{topic}]
+== @InFrame - Graphene way
+
+image::inframeGraphene1.png[role="middle"]
+
+[{topic}]
+== @InFrame - Graphene way
+
+image::inframeGraphene2.png[role="middle"]
+
+[{topic}]
+== What is wrong ?
+
+image::googleTestWithPageObjects.png[role="middle"]
+
+[{topic}]
+== This!
+
+image::googleTestWithPageObjectsGet.png[role="middle"]
+
+[{topic}]
+== @Location over Page Object declaration
+
+image::frontPageObjWithLocation.png[role="middle"]
+
+[{topic}]
+== @Location over Page Object declaration
+
+image::frontPageObjWithLocation1.png[role="middle"]
+
+[{topic}]
+== @InitialPage
+
+image::googleTestWithLocation.png[role="middle stretch-x"]
+
+[{topic}]
+== @InitialPage
+
+image::googleTestWithLocation1.png[role="middle stretch-x"]
+
+[{topic}]
+== Graphene.goTo
+
+image::googleTestWithGoto.png[role="middle"]
+
+[{topic}]
+== Graphene.goTo
+
+image::googleTestWithGoto2.png[role="middle"]
 
 == \\
 
