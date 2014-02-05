@@ -1,5 +1,5 @@
-Functional _testing_ of _web_ and _Android_ applications with Arquillian _Graphene_ and _Droidium_
-==================================================================================================
+Graphene & Droidium in action
+=============================
 Juraj Húska & Štefan Miklošovič
 v1.0, Feb 8, 2013
 :title: Graphene and Droidium
@@ -47,7 +47,7 @@ v1.0, Feb 8, 2013
 What is Graphene ?
 
 [{topic}]
-== *Writing* and mantaining tests
+== *Writing* and maintaining tests
 
 image::development.jpg[role="pull-left stretch-x stretch-y"]
 
@@ -63,10 +63,10 @@ image::maintenance.jpg[role="middle"]
 
 image::dry.jpg[role="middle stretch-x"]
 
-[{topic}]
-== Testers
+//[{topic}]
+//== Testers
 
-image::tester1.jpg[role="middle"]
+//image::tester1.jpg[role="middle"]
 
 [{topic}]
 == Testers
@@ -94,7 +94,7 @@ image::deploymentScenario.png[role="middle"]
 image::deploymentScenario1.png[role="middle"]
 
 [{topic}]
-== Injecting deployed app URL and browser instance
+== Injecting URL and browser
 
 image::deploymentScenario2.png[role="middle"]
 
@@ -104,7 +104,7 @@ image::deploymentScenario2.png[role="middle"]
 image::deploymentScenario3.png[role="middle"]
 
 [{topic}]
-== Test
+== Test method
 
 image::deploymentScenario4.png[role="middle"]
 
@@ -120,16 +120,16 @@ image::wowMoment1.jpg[role="middle"]
 image::graphene-logo.png[role="pull-right"]
 
 [role="incremental text-left"]
-* WebDriver on Steroids
+* WebDriver on steroids
 * Painkiller for testers
 
 [{topic}]
-== Graphene Crash Course
+== Graphene crash course
 
 image::googleTestBasic.png[role="middle"]
 
 [{topic}]
-== Wiring up Web Page elements & Test
+== Wiring up page & test
 
 image::googleTestBasic1.png[role="middle"]
 
@@ -147,35 +147,34 @@ image::wowMoment2.jpg[role="middle"]
 == \\
 
 [{statement}]
-Graphene 2.0.0.Final Released
+Graphene 2.0.0.Final(ly) Released
 
-[{topic}]
-== Baby boy is doing well
+//[{topic}]
+//== Baby boy is doing well
 
-image::testPassing1.png[role="middle stretch-x stretch-y"]
+//image::testPassing1.png[role="middle stretch-x stretch-y"]
 
-[{topic}]
-== Baby boy is doing well
+//[{topic}]
+//== Baby boy is doing well
 
-image::testPassing2.png[role="middle stretch-x"]
+//image::testPassing2.png[role="middle stretch-x"]
 
-[{topic}]
-== Father as well
+//[{topic}]
+//== Father as well
 
-image::lukas.jpg[role="middle"]
-
-== \\
-
-[{statement}]
-What abilities baby boy has ?
+//image::lukas.jpg[role="middle"]
 
 [{topic}]
 == @JQueryLocator
+
+oprav tento screenshot
 
 image::jqueryLoc.png[role="middle"]
 
 [{topic}]
 == @Page Objects
+
+prerobit na vyskakovacie po jednom
 
 * well known WebDriver pattern
 * make tests more readable
@@ -187,17 +186,17 @@ image::jqueryLoc.png[role="middle"]
 image::googleTestBasic.png[role="middle"]
 
 [{topic}]
-== Page Objects declaration
+== Page objects declaration
 
 image::googleFrontPageObject.png[role="middle"]
 
 [{topic}]
-== Page Objects declaration
+== Page objects declaration
 
 image::googleResultPageObject.png[role="middle"]
 
 [{topic}]
-== Test with Page Objects
+== Test with page objects
 
 image::googleTestWithPageObjects.png[role="middle"]
 
@@ -226,6 +225,8 @@ image::maintenance2.jpg[role="middle stretch-x stretch-y"]
 [{topic}]
 == Page Fragments
 
+prerobit na vyskakovacie po jednom
+
 * reusability
 * readability
 * cross browser testing
@@ -236,32 +237,32 @@ image::maintenance2.jpg[role="middle stretch-x stretch-y"]
 image::autocompleteFragment.png[role="middle"]
 
 [{topic}]
-== Wiring up Page Fragment & Web page
+== Wiring up fragment & page
 
 image::autocompleteFragment1.png[role="middle"]
 
 [{topic}]
-== Fragment's services
+== Services of fragment
 
 image::autocompleteFragment2.png[role="middle"]
 
 [{topic}]
-== Fragment's help methods
+== Help methods of fragment
 
 image::autocompleteFragment3.png[role="middle"]
 
 [{topic}]
-== Page Fragments injection into test
+== Page fragments injection
 
 image::testWithAutocompleteFragment.png[role="middle"]
 
 [{topic}]
-== Declaring Fragment's root element
+== Declaring fragment root element
 
 image::testWithAutocompleteFragment1.png[role="middle"]
 
 [{topic}]
-== Test with Page Fragments
+== Test with page fragments
 
 image::testWithAutocompleteFragment2.png[role="middle"]
 
@@ -321,12 +322,12 @@ image::googleTestWithPageObjects.png[role="middle"]
 image::googleTestWithPageObjectsGet.png[role="middle"]
 
 [{topic}]
-== @Location over Page Object declaration
+== @Location over page object declaration
 
 image::frontPageObjWithLocation.png[role="middle"]
 
 [{topic}]
-== @Location over Page Object declaration
+== @Location over page object declaration
 
 image::frontPageObjWithLocation1.png[role="middle"]
 
@@ -352,6 +353,8 @@ image::googleTestWithGoto2.png[role="middle"]
 
 == \\
 
+prerobit na vyskakovacie
+
 * Interceptors
 * JavaScript Interfaces
 * Request guards
@@ -369,8 +372,10 @@ image::bushAndPutin.jpg[role="middle"]
 [{statement}]
 Wanna test some *mobile*, huh?
 
-[{intro}]
-== Arquillian Droidium
+== \\
+
+[{statement}]
+Arquillian Droidium
 
 == \\
 
