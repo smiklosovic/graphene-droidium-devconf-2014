@@ -36,9 +36,9 @@ v1.0, Feb 8, 2013
 
 [role="incremental text-left"]
 * Graphene introduction
-* Graphene hottest goodies
+* *Graphene hottest goodies*
 * Droidium introduction
-* Droidium in action
+* *Droidium in action*
 
 
 == \\
@@ -63,11 +63,6 @@ image::maintenance.jpg[role="middle"]
 
 image::dry.jpg[role="middle stretch-x"]
 
-//[{topic}]
-//== Testers
-
-//image::tester1.jpg[role="middle"]
-
 [{topic}]
 == Testers
 image:tester2.jpg[role="pull-left"]
@@ -84,12 +79,12 @@ image::ike.png[role="pull-left stretch-y"]
 * Extensible
 
 [{topic}]
-== Arquillian Crash Course
+== Arquillian crash course
 
 image::deploymentScenario.png[role="middle"]
 
 [{topic}]
-== JUnit runner & Client mode
+== JUnit runner & client mode
 
 image::deploymentScenario1.png[role="middle"]
 
@@ -121,7 +116,7 @@ image::graphene-logo.png[role="pull-right"]
 
 [role="incremental text-left"]
 * WebDriver on steroids
-* Painkiller for testers
+* *Painkiller for testers*
 
 [{topic}]
 == Graphene crash course
@@ -149,35 +144,18 @@ image::wowMoment2.jpg[role="middle"]
 [{statement}]
 Graphene 2.0.0.Final(ly) Released
 
-//[{topic}]
-//== Baby boy is doing well
-
-//image::testPassing1.png[role="middle stretch-x stretch-y"]
-
-//[{topic}]
-//== Baby boy is doing well
-
-//image::testPassing2.png[role="middle stretch-x"]
-
-//[{topic}]
-//== Father as well
-
-//image::lukas.jpg[role="middle"]
-
 [{topic}]
 == @JQueryLocator
 
-oprav tento screenshot
-
-image::jqueryLoc.png[role="middle"]
+image::jqueryLocator.png[role="middle"]
 
 [{topic}]
 == @Page Objects
 
-prerobit na vyskakovacie po jednom
+[role="incremental text-left"]
 
 * well known WebDriver pattern
-* make tests more readable
+* *make tests more readable*
 * Graphene enhances its usability
 
 [{topic}]
@@ -206,7 +184,7 @@ image::googleTestWithPageObjects.png[role="middle"]
 image::googleTestWithPageObjects1.png[role="middle"]
 
 [{topic}]
-== Test with Page Objects
+== Test with page objects
 
 image::googleTestWithPageObjects2.png[role="middle"]
 
@@ -225,14 +203,14 @@ image::maintenance2.jpg[role="middle stretch-x stretch-y"]
 [{topic}]
 == Page Fragments
 
-prerobit na vyskakovacie po jednom
+[role="incremental text-left"]
 
 * reusability
-* readability
+* *readability*
 * cross browser testing
 
 [{topic}]
-== Page Fragments declaration
+== Page fragments declaration
 
 image::autocompleteFragment.png[role="middle"]
 
@@ -353,7 +331,7 @@ image::googleTestWithGoto2.png[role="middle"]
 
 == \\
 
-prerobit na vyskakovacie
+[role="incremental text-left"]
 
 * Interceptors
 * JavaScript Interfaces
