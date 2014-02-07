@@ -103,6 +103,11 @@ image::deploymentScenario3.png[role="middle"]
 
 image::deploymentScenario4.png[role="middle"]
 
+[{topic}]
+== Rewrap
+
+image::deploymentScenario.png[role="middle"]
+
 == \\
 
 image::wowMoment1.jpg[role="middle"]
@@ -357,114 +362,96 @@ Arquillian Droidium
 
 == \\
 
-*Droidium* is
+*Droidium* from high level
 [{stepwise}]
-* Tool for Android ftesting
-* Arquillian container adapter
-** manages your Android devices
-*** dynamically
-[{stepwise}]
+* Extension for Arquillian
 * Glues together
-** An *droid*
+** And *droid*
 ** Selen *ium* WebDriver
 ** Arquillian Drone
 ** Arquillian Graphene
 
-== \\$
+== \\
 
-Where I can test?
+Concept of *Arquillian containers*
 [{stepwise}]
-* ... in emulator?
-** yay!
-* ... in physical device ?
-** yay!
-* Do I have to start it before?
-** nope
-* What if I don't have any device?
-** it is dynamically created / deleted
-
-// ^^^ toto precnieva zo stranky, skratit alebo vymazat
+* What it container?
+* Container modes
+** Remote container
+** Managed container
+* *Droidium supports both*
+** managed in Droidium
+** remote in Droidium
 
 == \\
 
-*Droidium* is also
+What does *Droidium* solve?
 [{stepwise}]
-* smart
-** does everything for you
-* standalone
-** automate your Android device!
-* pluggable
-** *web* testing plugin
-** *native* and *hybrid* testing plugin
+* It ftests *web* apps on *AS* from *Android*
+* by *web plugin*
+** Uses "Android server" from Selenium
+* *It ftests native Android apps*
+* by *native plugin*
+** Uses "Selendroid server"
 
 == \\
 
-*Web testing* plugin
+Role of *Selendroid in Droidium*
 
 [{stepwise}]
+* Selendroid is APK installed beside of AUT
+* Instruments AUT
+* Translates *JSON wire protocol* to Android *native calls* which drive applications
+
+== \\
+
+*Web testing* workflow
+
 * code your web application
-* deploy web app to *JBoss AS*
-* start or connect to Android
-* open web app in *Android*
-* test web app via *Selenium*
-* all above *in one test run*
-[{stepwise}]
-** as *mvn test*
+* start containers
+* deploy web app to *AS*
+* *test* web app on *Android*
+** *via Graphene*
 
 == \\
 
-*Native testing* plugin
-[{stepwise}]
-* have your APK *as is*
-* install (deploy) it to Android
+*Native testing* workflow
+
+* code your Android application
+* start Android container
+* *install it* to Android *(as-is)*
 * start Android activities
-* test native app just as web app
-** via WebDriver API
-* all above *in one test run*
-[{stepwise}]
-** as *mvn test*
-
-[{source}]
-== Operating on native elements
-
-.MyNativeTest.java
-[syntax="java"]
-----
-WebElement usernameField = mobile.findElement(By.id('some_field'));
-usernameField.sendKeys("john");
-
-WebElement submitButton = mobile.findElement(By.id('some_button'));
-submitButton.click();
-
-// Selenium touch API, swipe from right to left
-
-WebElement contacts = mobile.findElement(By.id("contacts"));
-new TouchActions(mobile).flick(contacts, -100, 0, 0).perform();
-----
-
-IDs are just Android resource identifiers
+* *test* native app
+** *via Graphene*
 
 == \\
 
 [{statement}]
-Web & native can be mixed
+*No difference* between web and native testing
 
 == \\
 
-[{intro}]
-== Droidium *demo*
+[{statement}]
+*One API*
 
 == \\
 
-*Droidium wrapping up*
+[{statement}]
+*@Page == activity*
+
+== \\
+
+[{statement}]
+*Demo*
+
+== \\
+Wrapping it up
 [{stepwise}]
-* No excuses not to test
-* Cloud ready
-** Travis
-** CloudBees
-* Test *complex* usage scenarios
-* Test *communication* between web and mobile clients
-* Sky is the limit ...
+* integrates application servers with Android
+* tests complex usage scenarios
+* no bootstrapping on your part
+* fast turnaround with remote containers (TDD)
+* cloud ready - Travis, CloudBees
 
 [role="topic recap final"]
 == Final recap
