@@ -27,7 +27,7 @@ v1.0, Feb 8, 2013
 
 --
 * Štefan Miklošovič
-** QA Engineer at Red Hat, Inc.
+** Lead of Arquillian Droidium
 ** @smikloso
 --
 
@@ -43,8 +43,8 @@ v1.0, Feb 8, 2013
 
 == \\
 
-[{statement}]
-What is Graphene ?
+What is Arquillian Graphene ?
+
 
 [{topic}]
 == *Writing* and maintaining tests
@@ -116,7 +116,7 @@ image::graphene-logo.png[role="pull-right"]
 
 [role="incremental text-left"]
 * WebDriver on steroids
-* *Painkiller for testers*
+* *Painkiller for web UI testers*
 
 [{topic}]
 == Graphene crash course
@@ -381,7 +381,7 @@ Where I can test?
 * Do I have to start it before?
 ** nope
 * What if I don't have any device?
-** it is dynamically created and deleted
+** it is dynamically created / deleted
 
 // ^^^ toto precnieva zo stranky, skratit alebo vymazat
 
@@ -467,20 +467,7 @@ Web & native can be mixed
 * Sky is the limit ...
 
 [role="topic recap final"]
-== Final recap / prerobit
-
-[{stepwise}]
-* Arquillian *reuses* existing tools
-* Plenty of *extensions* 
-** UI testing
-** Fault injection
-** REST
-** ...
-* Supports *more* then Java
-** Android
-** JavaScript
-** Groovy
-* CI *ready*
+== Final recap
 
 [{ending}, hrole="name"]
 == Get *testing* done!
