@@ -382,6 +382,7 @@ Concept of *Arquillian containers*
 * *Droidium supports both*
 ** managed in Droidium
 ** remote in Droidium
+* *Droidium is container adapter for Android*
 
 == \\
 
